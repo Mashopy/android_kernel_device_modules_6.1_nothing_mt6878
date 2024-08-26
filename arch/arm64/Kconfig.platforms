@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+config ARCH_MT6878
+	bool "Enable Support for MediaTek MT6878"
+	depends on ARCH_MEDIATEK
+	help
+	  This enables support for the MediaTek MT6878 chipset. If
+	  you do not wish to build a kernel that runs on this
+	  chipset or if you are unsure, say 'N' here.
+
+config ARCH_MT6897
+	bool "Enable Support for MediaTek MT6897"
+	depends on ARCH_MEDIATEK
+	help
+	  This enables support for the MediaTek MT6897 chipset. If
+	  you do not wish to build a kernel that runs on this
+	  chipset or if you are unsure, say 'N' here.
+
+config ARCH_MT6985
+	bool "Enable Support for MediaTek MT6985"
+	depends on ARCH_MEDIATEK
+	help
+	  This enables support for the MediaTek MT6985 chipset. If
+	  you do not wish to build a kernel that runs on this
+	  chipset or if you are unsure, say 'N' here.
+
+config ARCH_MT6989
+	bool "Enable Support for MediaTek MT6989"
+	depends on ARCH_MEDIATEK
+	help
+	  This enables support for the MediaTek MT6989 chipset. If
+	  you do not wish to build a kernel that runs on this
+	  chipset or if you are unsure, say 'N' here.
