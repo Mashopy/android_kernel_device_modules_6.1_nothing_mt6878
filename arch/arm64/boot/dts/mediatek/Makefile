@@ -13,38 +13,22 @@ DTC_INCLUDE += $(dir $(src))
 # for devicetree overlay
 DTC_FLAGS += -@
 
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt2712-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6755-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6779-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6795-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6797-x20-dev.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt6873-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt7622-rfb1.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt7622-bananapi-bpi-r64.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8167-pumpkin.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8173-elm.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8173-elm-hana.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8173-elm-hana-rev7.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8173-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-burnet.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-damu.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-fennel-sku1.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-fennel-sku6.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-fennel14.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-juniper-sku16.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-kappa.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-kenzo.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-willow-sku0.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-jacuzzi-willow-sku1.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-kakadu.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-kodama-sku16.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-kodama-sku272.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-kodama-sku288.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-kodama-sku32.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-krane-sku0.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-kukui-krane-sku176.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8183-pumpkin.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8192-evb.dtb
-dtb-$(CONFIG_ARCH_MEDIATEK) += mt8516-pumpkin.dtb
+ifeq ($(CONFIG_ARCH_MT6878),y)
+dtb-y += mt6878.dtb
+dtbo-y += k6878v1_64.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_MT6897),y)
+dtb-y += mt6897.dtb
+dtbo-y += k6897v1_64.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_MT6985),y)
+dtb-y += mt6985.dtb
+dtbo-y += k6985v1_64_for_dx3.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_MT6989),y)
+dtb-y += mt6989.dtb
+dtbo-y += k6989v1_64.dtbo
+endif
