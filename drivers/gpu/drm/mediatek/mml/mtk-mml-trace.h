@@ -34,7 +34,7 @@ TRACE_EVENT(tracing_mark_write,
 
 /* This part must be outside protection */
 #undef TRACE_INCLUDE_PATH
-#define TRACE_INCLUDE_PATH ../../drivers/gpu/drm/mediatek/mml
+#define TRACE_INCLUDE_PATH ../../../kernel_device_modules-6.1/drivers/gpu/drm/mediatek/mml
 #define TRACE_INCLUDE_FILE mtk-mml-trace
 #include <trace/define_trace.h>
 
