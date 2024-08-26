@@ -43,7 +43,7 @@ config MTK_LPM_MODULE_NAME
 
 config MTK_LPM_MT6878
 	tristate "Specify Mediatek LPM Platform is MT6878"
-	depends on MTK_LOW_POWER_MODULE
+	depends on MTK_LOW_POWER_MODULE && ARCH_MT6878
 	select MTK_LPM_DBG_COMMON
 	help
 	  Select MediaTek Low Power Module Platform is MT6878
@@ -63,7 +63,7 @@ config MTK_LPM_MT6886
 
 config MTK_LPM_MT6897
 	tristate "Specify Mediatek LPM Platform is MT6897"
-	depends on MTK_LOW_POWER_MODULE
+	depends on MTK_LOW_POWER_MODULE && ARCH_MT6897
 	select MTK_LPM_DBG_COMMON
 	help
 	  Select MediaTek Low Power Module Platform is MT6897
@@ -83,7 +83,7 @@ config MTK_LPM_MT6983
 
 config MTK_LPM_MT6985
 	tristate "Specify Mediatek LPM Platform is MT6985"
-	depends on MTK_LOW_POWER_MODULE
+	depends on MTK_LOW_POWER_MODULE && ARCH_MT6985
 	select MTK_LPM_DBG_COMMON
 	help
 	  Select MediaTek Low Power Module Platform is MT6985
@@ -93,7 +93,7 @@ config MTK_LPM_MT6985
 
 config MTK_LPM_MT6989
 	tristate "Specify Mediatek LPM Platform is MT6989"
-	depends on MTK_LOW_POWER_MODULE
+	depends on MTK_LOW_POWER_MODULE && ARCH_MT6989
 	select MTK_LPM_DBG_COMMON
 	help
 	  Select MediaTek Low Power Module Platform is MT6989

@@ -173,6 +173,7 @@ config MTK_COMBO_CHIP_CONSYS_6873
 
 config MTK_COMBO_CHIP_CONSYS_6878
 	bool "MTK MT6878 combo chip support"
+	depends on ARCH_MT6878
 	help
 	  this config is used to decided SOC consys version
 	  in current platform
@@ -197,6 +198,7 @@ config MTK_COMBO_CHIP_CONSYS_6893
 
 config MTK_COMBO_CHIP_CONSYS_6897
 	bool "MTK MT6897 combo chip support"
+	depends on ARCH_MT6897
 	help
 	  this config is used to decided SOC consys version
 	  in current platform
@@ -229,6 +231,7 @@ config MTK_COMBO_CHIP_CONSYS_6895
 
 config MTK_COMBO_CHIP_CONSYS_6985
 	bool "MTK MT6985 combo chip support"
+	depends on ARCH_MT6985
 	help
 	  this config is used to decided SOC consys version
 	  in current platform
@@ -237,6 +240,7 @@ config MTK_COMBO_CHIP_CONSYS_6985
 
 config MTK_COMBO_CHIP_CONSYS_6989
 	bool "MTK MT6989 combo chip support"
+	depends on ARCH_MT6989
 	help
 	  this config is used to decided SOC consys version
 	  in current platform

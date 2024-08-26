@@ -9,7 +9,7 @@ config MTK_DCM_COMMON
 
 config MTK_DCM_MT6985
 	tristate "Mediatek MT6985 DCM control"
-	depends on ARCH_MEDIATEK && OF
+	depends on ARCH_MEDIATEK && OF && ARCH_MT6985
 	select MTK_DCM_COMMON
 	help
 	  For Mediatek MT6985 Dynamic Clock Management HW control. Only enable when you
@@ -19,7 +19,7 @@ config MTK_DCM_MT6985
 
 config MTK_DCM_MT6878
 	tristate "Mediatek MT6878 DCM control"
-	depends on ARCH_MEDIATEK && OF
+	depends on ARCH_MEDIATEK && OF && ARCH_MT6878
 	select MTK_DCM_COMMON
 	help
 	  For Mediatek MT6878 Dynamic Clock Management HW control. Only enable when you
@@ -29,7 +29,7 @@ config MTK_DCM_MT6878
 
 config MTK_DCM_MT6897
 	tristate "Mediatek MT6897 DCM control"
-	depends on ARCH_MEDIATEK && OF
+	depends on ARCH_MEDIATEK && OF && ARCH_MT6897
 	select MTK_DCM_COMMON
 	help
 	  For Mediatek MT6897 Dynamic Clock Management HW control. Only enable when you
@@ -39,7 +39,7 @@ config MTK_DCM_MT6897
 
 config MTK_DCM_MT6989
 	tristate "Mediatek MT6989 DCM control"
-	depends on ARCH_MEDIATEK && OF
+	depends on ARCH_MEDIATEK && OF && ARCH_MT6989
 	select MTK_DCM_COMMON
 	help
 	  For Mediatek MT6989 Dynamic Clock Management HW control. Only enable when you

@@ -87,7 +87,7 @@ config MTK_GPU_MT6855_SUPPORT
 
 config MTK_GPU_MT6878_SUPPORT
 	tristate "Specify Mediatek GPU Platform is mt6878"
-	depends on MTK_GPU_SUPPORT
+	depends on MTK_GPU_SUPPORT && ARCH_MT6878
 	help
 	  Select MediaTek GPU Platform is mt6878.
 	  Set Y or M to select this feature for specific platform-mt6878,
@@ -132,7 +132,7 @@ config MTK_GPU_MT6895_SUPPORT
 
 config MTK_GPU_MT6897_SUPPORT
 	tristate "Specify Mediatek GPU Platform is mt6897"
-	depends on MTK_GPU_SUPPORT
+	depends on MTK_GPU_SUPPORT && ARCH_MT6897
 	help
 	  Select MediaTek GPU Platform is mt6897.
 	  Set Y or M to select this feature for specific platform-mt6897,
@@ -150,7 +150,7 @@ config MTK_GPU_MT6983_SUPPORT
 
 config MTK_GPU_MT6985_SUPPORT
 	tristate "Specify Mediatek GPU Platform is mt6985"
-	depends on MTK_GPU_SUPPORT
+	depends on MTK_GPU_SUPPORT && ARCH_MT6985
 	help
 	  Select MediaTek GPU Platform is mt6985.
 	  Set Y or M to select this feature for specific platform-mt6985,
@@ -159,7 +159,7 @@ config MTK_GPU_MT6985_SUPPORT
 
 config MTK_GPU_MT6989_SUPPORT
 	tristate "Specify Mediatek GPU Platform is mt6989"
-	depends on MTK_GPU_SUPPORT
+	depends on MTK_GPU_SUPPORT && ARCH_MT6989
 	help
 	  Select MediaTek GPU Platform is mt6989.
 	  Set Y or M to select this feature for specific platform-mt6989,

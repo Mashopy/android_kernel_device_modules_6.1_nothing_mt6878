@@ -104,7 +104,7 @@ config MTK_SWPM_MT6886
 
 config MTK_SWPM_MT6897
 	tristate "Specify Mediatek SWPM Platform is MT6897"
-	depends on MTK_SWPM_MODULE
+	depends on MTK_SWPM_MODULE && ARCH_MT6897
 	select MTK_SWPM_DBG_COMMON
 	help
 	  Select MediaTek Software Power Model Platform is MT6897
@@ -144,7 +144,7 @@ config MTK_SWPM_MT6983
 
 config MTK_SWPM_MT6985
 	tristate "Specify Mediatek SWPM Platform is MT6985"
-	depends on MTK_SWPM_MODULE
+	depends on MTK_SWPM_MODULE && ARCH_MT6985
 	select MTK_SWPM_DBG_COMMON
 	help
 	  Select MediaTek Software Power Model Platform is MT6985
@@ -154,7 +154,7 @@ config MTK_SWPM_MT6985
 
 config MTK_SWPM_MT6878
 	tristate "Specify Mediatek SWPM Platform is MT6878"
-	depends on MTK_SWPM_MODULE
+	depends on MTK_SWPM_MODULE && ARCH_MT6878
 	select MTK_SWPM_DBG_COMMON
 	help
 	  Select MediaTek Software Power Model Platform is MT6878
@@ -164,7 +164,7 @@ config MTK_SWPM_MT6878
 
 config MTK_SWPM_MT6989
 	tristate "Specify Mediatek SWPM Platform is MT6989"
-	depends on MTK_SWPM_MODULE
+	depends on MTK_SWPM_MODULE && ARCH_MT6989
 	select MTK_SWPM_DBG_COMMON
 	help
 	  Select MediaTek Software Power Model Platform is MT6989

@@ -89,7 +89,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-mdp_drv_mt6886-objs := mdp_mt6886.o\
+#mdp_drv_mt6886-objs := mdp_mt6886.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -103,7 +103,7 @@ mdp_drv_mt6886-objs := mdp_mt6886.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-mdp_drv_mt6897-objs := mdp_mt6897.o\
+#mdp_drv_mt6897-objs := mdp_mt6897.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -117,7 +117,7 @@ mdp_drv_mt6897-objs := mdp_mt6897.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-mdp_drv_mt6983-objs := mdp_mt6983.o\
+#mdp_drv_mt6983-objs := mdp_mt6983.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -131,7 +131,7 @@ mdp_drv_mt6983-objs := mdp_mt6983.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-mdp_drv_mt6985-objs := mdp_mt6985.o\
+#mdp_drv_mt6985-objs := mdp_mt6985.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -145,7 +145,7 @@ mdp_drv_mt6985-objs := mdp_mt6985.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-mdp_drv_mt6989-objs := mdp_mt6989.o\
+#mdp_drv_mt6989-objs := mdp_mt6989.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \

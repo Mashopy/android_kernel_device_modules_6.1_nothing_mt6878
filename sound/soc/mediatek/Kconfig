@@ -64,7 +64,7 @@ config SND_SOC_MT6873_MT6359P
 
 config DEVICE_MODULES_SND_SOC_MT6878
 	tristate "ASoC support for Mediatek MT6878 chip"
-	depends on ARCH_MEDIATEK
+	depends on ARCH_MEDIATEK && ARCH_MT6878
 	select DEVICE_MODULES_SND_SOC_MEDIATEK
 	select SND_SOC_MTK_SRAM
 	select SND_SOC_MTK_SMART_PHONE
@@ -108,7 +108,7 @@ config SND_SOC_MT6886_MT6368
 
 config SND_SOC_MT6897
 	tristate "ASoC support for Mediatek MT6897 chip"
-	depends on ARCH_MEDIATEK
+	depends on ARCH_MEDIATEK && ARCH_MT6897
 	select DEVICE_MODULES_SND_SOC_MEDIATEK
 	select SND_SOC_MTK_SRAM
 	select SND_SOC_MTK_SMART_PHONE
@@ -152,7 +152,7 @@ config SND_SOC_MT6983_MT6338
 
 config SND_SOC_MT6985
 	tristate "ASoC support for Mediatek MT6985 chip"
-	depends on ARCH_MEDIATEK
+	depends on ARCH_MEDIATEK && ARCH_MT6985
 	select DEVICE_MODULES_SND_SOC_MEDIATEK
 	select SND_SOC_MTK_SRAM
 	select SND_SOC_MTK_SMART_PHONE
@@ -174,7 +174,7 @@ config SND_SOC_MT6985_MT6338
 
 config SND_SOC_MT6989
 	tristate "ASoC support for Mediatek MT6989 chip"
-	depends on ARCH_MEDIATEK
+	depends on ARCH_MEDIATEK && ARCH_MT6989
 	select DEVICE_MODULES_SND_SOC_MEDIATEK
 	select SND_SOC_MTK_SRAM
 	select SND_SOC_MTK_SMART_PHONE

@@ -11,6 +11,7 @@ config MTK_VMM_SPM
 
 config MTK_VMM_SPM_MT6989
 	tristate "MediaTek VMM SPM MT6989 driver"
+	depends on ARCH_MT6989
 	help
 	  This driver is for the Multimedia Infrastructure in MediaTek SoCs.
 	  The VMM SPM driver mainly help control VMM buck isolation. It's a
