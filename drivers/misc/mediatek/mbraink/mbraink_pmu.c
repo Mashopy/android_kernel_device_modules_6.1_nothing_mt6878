@@ -8,9 +8,11 @@
 #include <linux/perf_event.h>
 #include "mbraink_pmu.h"
 
+static u64 spec_instructions[8];
+
+#if IS_ENABLED(CONFIG_MTK_LPM_MT6989)
 extern DEFINE_PER_CPU(struct perf_event *, inst_spec_events);
 static DEFINE_PER_CPU(unsigned long long,  inst_spec_count);
-static u64 spec_instructions[8];
 
 static int mbraink_pmu_get_inst_count(int cpu)
 {
@@ -41,7 +43,6 @@ static void _mbraink_gen_pmu_count(void *val)
 	mbraink_pmu_get_inst_count(cpu);
 }
 
-#if IS_ENABLED(CONFIG_MTK_LPM_MT6989)
 int mbraink_enable_pmu_inst_spec(bool enable)
 {
 	pr_info("mbrain enable pmu inst spec, enable: %d", enable);
