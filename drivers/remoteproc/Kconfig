@@ -33,6 +33,13 @@ config MTK_CCU_DEBUG
 
 	  If unsure, say N.
 
+config MTK_CCU_RPROC_MSSV
+	bool "mtk_ccu_mssv KO"
+	depends on MTK_CCU_RPROC
+	default n
+	help
+	  This macro define if mtk_ccu_mssv.o need to be built.
+
 endif # REMOTEPROC
 
 endmenu
