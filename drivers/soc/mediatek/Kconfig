@@ -57,6 +57,12 @@ config DEVICE_MODULES_MTK_SCPSYS_PM_DOMAINS
 	  Control Processor System (SCPSYS) has several power management related
 	  tasks in the system.
 
+config DEVICE_MODULES_MTK_SCPSYS_DUMMY
+	bool "scpsys-dummy KO"
+	default n
+	help
+	  This macro define if scpsys-dummy.o need to be built.
+
 config DEVICE_MODULES_MTK_MMSYS
 	tristate "MediaTek MMSYS Support"
 	default ARCH_MEDIATEK
