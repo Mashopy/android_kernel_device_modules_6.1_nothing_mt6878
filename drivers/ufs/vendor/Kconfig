@@ -41,3 +41,10 @@ config UFS_MEDIATEK_MCQ
 	help
 	  Enable on platform that implemented MediaTek non-standard MCQ.
 	  This require Kernel support on mcq vendor hook like in kernel 5.15.
+
+config UFS_MEDIATEK_ISE
+	bool "MediaTek UFS KO with iSE support"
+	depends on SCSI_UFSHCD && DEVICE_MODULES_SCSI_UFS_MEDIATEK
+	default n
+	help
+	  Enable UFS KO building with iSE support.
