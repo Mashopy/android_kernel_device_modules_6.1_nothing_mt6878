@@ -172,3 +172,10 @@ config MICROTRUST_TZDRIVER_DYNAMICAL_DEBUG
 	  This framework supports DCIH and GP API test drivers.
 	  Say Y if you would like to enable the test framework.
 	  If unsure, say N.
+
+config MICROTRUST_TZ_FFA
+	bool "Microtrust TEEI with FFA module"
+	depends on MICROTRUST_TZ_DRIVER
+	default n
+	help
+	  Enables support of Microtrust tee driver kernel with ffa module.

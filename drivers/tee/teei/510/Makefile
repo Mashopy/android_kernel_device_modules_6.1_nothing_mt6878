@@ -23,6 +23,8 @@ endif
 
 $(info "=----------------1---------------------------")
 subdir-ccflags-$(CONFIG_MICROTRUST_DEBUG) += -DDEBUG
+ifeq ($(CONFIG_MICROTRUST_TZ_FFA),y)
+
 #add teei with ffa module
 obj-m += isee-ffa.o
 isee-ffa-y :=          tee/tee_core.o \
@@ -69,6 +71,8 @@ isee-ffa-y +=              ut_tester/ut_tester.o
 subdir-ccflags-y  += -DTEEI_UNITTEST_SUPPORT
 endif
 
+else
+
 #add teei kernel driver without ffa
 obj-m += isee.o
 isee-y :=              tee/tee_core.o \
@@ -113,6 +117,8 @@ endif
 ifneq ($(filter y m, $(CONFIG_MICROTRUST_UNITTEST_SUPPORT)),)
 isee-y +=              ut_tester/ut_tester.o
 subdir-ccflags-y  += -DTEEI_UNITTEST_SUPPORT
+endif
+
 endif
 
 $(info "=----------------2---------------------------")

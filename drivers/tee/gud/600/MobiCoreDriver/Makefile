@@ -16,6 +16,7 @@
 
 GUD_ROOT_FOLDER := $(DEVICE_MODULES_PATH)/drivers/tee/gud/$(CONFIG_TRUSTONIC_TEE_VERSION)
 
+ifneq ($(CONFIG_TRUSTONIC_TEE_FFA), y)
 # add our modules to kernel.
 obj-$(CONFIG_TRUSTONIC_TEE_SUPPORT) += mcDrvModule.o
 
@@ -45,6 +46,8 @@ mcDrvModule-y := \
 	xen_common.o \
 	xen_fe.o
 
+else
+
 # add our ffa modules to kernel.
 obj-$(CONFIG_TRUSTONIC_TEE_SUPPORT) += mcDrvModule-ffa.o
 
@@ -73,6 +76,8 @@ mcDrvModule-ffa-y := \
 	xen_be.o \
 	xen_common.o \
 	xen_fe.o
+
+endif
 
 # Release mode by default
 ccflags-y += -DNDEBUG

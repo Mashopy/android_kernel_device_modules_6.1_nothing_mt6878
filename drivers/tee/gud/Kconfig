@@ -31,3 +31,10 @@ config TRUSTONIC_TRUSTED_UI
 	  Trustonic TUI features was based on Trustonic TEE mechanism to protect
 	  Touch/Display inside TEE, to prevent malicious access of sensitive
 	  data used by APPs like Banking.
+
+config TRUSTONIC_TEE_FFA
+	bool "Trustonic TEE with FFA module"
+	depends on TRUSTONIC_TEE_SUPPORT
+	default n
+	help
+	  Enables Trustonic TEE with ffa module.
