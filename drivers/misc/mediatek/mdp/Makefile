@@ -56,23 +56,41 @@ endif
 
 # driver module
 obj-$(CONFIG_MTK_MDP) += cmdq_helper_inf.o
+
+ifeq ($(CONFIG_MTK_MDP_MT6878),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6878.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6878.o
 endif
+endif
+
+ifeq ($(CONFIG_MTK_MDP_MT6886),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6886.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6886.o
 endif
+endif
+
+ifeq ($(CONFIG_MTK_MDP_MT6897),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6897.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6897.o
 endif
+endif
+
+ifeq ($(CONFIG_MTK_MDP_MT6983),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6983.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6983.o
 endif
+endif
+
+ifeq ($(CONFIG_MTK_MDP_MT6985),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6985.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6985.o
 endif
+endif
+
+ifeq ($(CONFIG_MTK_MDP_MT6989),m)
 ifneq ($(wildcard $(srctree)/$(src)/mdp_mt6989.c),)
 obj-$(CONFIG_MTK_MDP) += mdp_drv_mt6989.o
+endif
 endif
 
 mdp_drv_mt6878-objs := mdp_mt6878.o\
@@ -89,7 +107,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-#mdp_drv_mt6886-objs := mdp_mt6886.o\
+mdp_drv_mt6886-objs := mdp_mt6886.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -103,7 +121,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-#mdp_drv_mt6897-objs := mdp_mt6897.o\
+mdp_drv_mt6897-objs := mdp_mt6897.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -117,7 +135,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-#mdp_drv_mt6983-objs := mdp_mt6983.o\
+mdp_drv_mt6983-objs := mdp_mt6983.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -131,7 +149,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-#mdp_drv_mt6985-objs := mdp_mt6985.o\
+mdp_drv_mt6985-objs := mdp_mt6985.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
@@ -145,7 +163,7 @@ mdp_drv_mt6878-objs := mdp_mt6878.o\
 	mdp_fence.o \
 	mdp_dpc.o
 
-#mdp_drv_mt6989-objs := mdp_mt6989.o\
+mdp_drv_mt6989-objs := mdp_mt6989.o\
 	mdp_driver.o \
 	mdp_ioctl_ex.o \
 	mdp_common.o \
